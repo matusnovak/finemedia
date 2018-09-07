@@ -113,6 +113,10 @@ int main(int argc, char *argv[]) {
             ffw::openImageReader(filename)
         );
 
+        // The library also contains:
+        // void readImage(const std::string& path, ffw::ImageBuffer& image); - throws!
+        // for quick and dirty way of reading images.
+
         // Print some stats
         std::cout << "> Image: " << filename << std::endl;
         std::cout << "size: " << reader->getWidth() << "x" << reader->getHeight() << std::endl;
