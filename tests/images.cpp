@@ -325,10 +325,6 @@ TEST_CASE("TIF_GRAYSCALE_ALPHA_16", "[TIF]"){
 //	TestImage<ffw::TifLoader, ffw::TifSaver>("GRAYSCALE_ALPHA_32F", "tif", 32, 64, ffw::ImageType::GRAYSCALE_ALPHA_32F, 181, 141, 181 * 8, 2);
 //}
 
-#if defined(_MSC_VER) && _MSC_VER == 1800 && (defined(_DEBUG) || defined(DEBUG)
-// libtiff freezes if run on Debug mode in Visual Studio 2013
-// No one knows why
-#else
 TEST_CASE("TIF_RGB_888", "[TIF]"){
     TestImage<ffw::TifLoader, ffw::TifSaver>("RGB_888", "tif", 8, 24, ffw::ImageType::RGB_888, 181, 141, 0, 1, false, 181 * 3, 3);
 }
@@ -352,7 +348,6 @@ TEST_CASE("TIF_RGB_ALPHA_16161616", "[TIF]"){
 TEST_CASE("TIF_RGB_ALPHA_32323232F", "[TIF]"){
     TestImage<ffw::TifLoader, ffw::TifSaver>("RGB_ALPHA_32323232F", "tif", 32, 128, ffw::ImageType::RGB_ALPHA_32323232F, 181, 141, 0, 1, false, 181 * 16, 4, 0.60f);
 }
-#endif
 
 TEST_CASE("DDS_GRAYSCALE_8", "[DDS]") {
     TestImage<ffw::DdsLoader, ffw::DdsSaver>("GRAYSCALE_8", "dds", 8, 8, ffw::ImageType::GRAYSCALE_8, 181, 141, 0, 8, false, 181 * 1, 1);
