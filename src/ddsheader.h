@@ -1,0 +1,68 @@
+struct _DDS_PIXELFORMAT {
+  uint32_t dwSize;
+  uint32_t dwFlags;
+  uint32_t dwFourCC;
+  uint32_t dwRGBBitCount;
+  uint32_t dwRBitMask;
+  uint32_t dwGBitMask;
+  uint32_t dwBBitMask;
+  uint32_t dwABitMask;
+};
+
+struct _DDS_HEADER {
+  uint32_t           dwSize;
+  uint32_t           dwFlags;
+  uint32_t           dwHeight;
+  uint32_t           dwWidth;
+  uint32_t           dwPitchOrLinearSize;
+  uint32_t           dwDepth;
+  uint32_t           dwMipMapCount;
+  uint32_t           dwReserved1[11];
+  _DDS_PIXELFORMAT   ddspf;
+  uint32_t           dwCaps;
+  uint32_t           dwCaps2;
+  uint32_t           dwCaps3;
+  uint32_t           dwCaps4;
+  uint32_t           dwReserved2;
+};
+
+#define _DDS_HEADER_FLAGS_CAPS 0x1
+#define _DDS_HEADER_FLAGS_MIPS 0x20000
+#define _DDS_HEADER_FLAGS_WIDTH 0x4
+#define _DDS_HEADER_FLAGS_HEIGHT 0x2
+#define _DDS_HEADER_FLAGS_PITCH 0x8
+#define _DDS_HEADER_FLAGS_PIXELFORMAT 0x1000
+#define _DDS_HEADER_FLAGS_DEPTH 0x800000
+#define _DDS_HEADER_FLAGS_LINEARSIZE 0x80000
+
+#define _DDS_PIXELFORMAT_FLAGS_ALPHA_PIXELS 0x1
+#define _DDS_PIXELFORMAT_FLAGS_ALPHA 0x2
+#define _DDS_PIXELFORMAT_FLAGS_COMPRESSED 0x4
+#define _DDS_PIXELFORMAT_FLAGS_RGB 0x40
+#define _DDS_PIXELFORMAT_FLAGS_LUM 0x20000
+
+#define _DDS_HEADER_CAPS1_COMPLEX 0x8
+#define _DDS_HEADER_CAPS1_MIPMAP 0x400000
+#define _DDS_HEADER_CAPS1_TEXTURE 0x1000
+
+#define _DDS_HEADER_CAPS2_CUBEMAP 0x200
+#define _DDS_HEADER_CAPS2_CUBEMAP_POSITIVEX 0x400
+#define _DDS_HEADER_CAPS2_CUBEMAP_NEGATIVEX 0x800
+#define _DDS_HEADER_CAPS2_CUBEMAP_POSITIVEY 0x1000
+#define _DDS_HEADER_CAPS2_CUBEMAP_NEGATIVEY 0x2000
+#define _DDS_HEADER_CAPS2_CUBEMAP_POSITIVEZ 0x4000
+#define _DDS_HEADER_CAPS2_CUBEMAP_NEGATIVEZ 0x8000
+#define _DDS_HEADER_CAPS2_CUBEMAP_VOLUME 0x200000
+
+#define _DDS_FOURCC_DXT1 0x31545844
+#define _DDS_FOURCC_DXT3 0x33545844
+#define _DDS_FOURCC_DXT5 0x35545844
+#define _DDS_FOURCC_RED_RGTC1 0x55344342
+#define _DDS_FOURCC_RED_GREEN_RGTC2 0x55354342
+#define _DDS_FOURCC_SIGNED_RED_RGTC1 0x53344342
+#define _DDS_FOURCC_SIGNED_RED_GREEN_RGTC2 0x53354342
+#define _DDS_FOURCC_GRAY_16F 111
+#define _DDS_FOURCC_GRAY_32F 114
+#define _DDS_FOURCC_RG_1616F 112 
+#define _DDS_FOURCC_RGB_ALPHA_16161616F 113
+#define _DDS_FOURCC_RGB_ALPHA_32323232F 116
