@@ -6,6 +6,7 @@
 #include <cstring>
 #include <algorithm>
 #include <memory>
+#include <cmath>
 
 namespace ffw {
     /**
@@ -100,7 +101,7 @@ namespace ffw {
             if(isCompressed()) {
                 return getMipMapSize(mipmap) / getHeight(mipmap);
             }
-            return size_t(ceil(getWidth(mipmap) * (getBitsPerPixel() / 8.0f)));
+            return size_t(std::ceil(getWidth(mipmap) * (getBitsPerPixel() / 8.0f)));
         }
         /**
          * @brief Returns the number of bits per one pixels
