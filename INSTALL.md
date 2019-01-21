@@ -40,7 +40,7 @@ Please note that if you have downloaded the finemedia from the GitHub releases, 
 3. In Configuration Properties -> C++ -> General -> Additional Include Directories add `C:\path\to\finemedia\install\include`.
 4. In Configuration Properties -> Linker -> General -> Additional Library Directories add  `C:\path\to\finemedia\install\lib`.
 5. In Configuration Properties -> Linker -> Input -> Additional Dependencies add `finemedia.lib`.
-6. Copy the `fineframework.dll` from `C:\path\to\finemedia\install\bin` to your project build directory (where your project exe will be generated). This is not needed during the compilation, but you will need it to distribute or run the program. Otherwise you will get "The program can't start because finemedia.dll is missing from your computer. Alternatively, put it in your PATH variable.
+6. Copy the `finemedia.dll` from `C:\path\to\finemedia\install\bin` to your project build directory (where your project exe will be generated). This is not needed during the compilation, but you will need it to distribute or run the program. Otherwise you will get "The program can't start because finemedia.dll is missing from your computer. Alternatively, put it in your PATH variable.
 
 ## Linux
 

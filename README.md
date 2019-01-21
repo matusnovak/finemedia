@@ -80,7 +80,7 @@ This library also bundles all third party libraries statically. Meaning, you onl
 
 ## Dependencies
 
-All dependencies listed here are already included as a git submodule and will be statically linked to the fineframework library. Therefore, no need to compile them manually, nor link them manually! Everything is automated via CMake.
+All dependencies listed here are already included as a git submodule and will be statically linked to the finemedia library. Therefore, no need to compile them manually, nor link them manually! Everything is automated via CMake.
 
 * [libjpeg](https://github.com/LuaDist/libjpeg.git) - For reading and writing JPG images.
 * [libtiff](https://gitlab.com/libtiff/libtiff.git) - For reading and writing TIFF images.
